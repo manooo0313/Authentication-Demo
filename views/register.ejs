@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<% include ./partials/header %>
+
     <h1>Sign Up Form:</h1>
     <form action="/register" method="POST">
       <input type="text" name="username" placeholder="username">
       <input type="password" name="password" placeholder="password">
       <button>Sign Up!</button>
     </form>
-  </body>
-</html>
+    
+
+    <% include ./partials/footer %>

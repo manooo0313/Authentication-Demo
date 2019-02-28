@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 20px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #ff9100;
 }
@@ -9,3 +9,8 @@ a {
   background: #000000
 }
 
+.footer {
+  margin-top: 65%;
+  text-align: center;
+
+}

@@ -6,7 +6,7 @@ var LocalStrategy = require('passport-local');
 
 //GET home page.
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Authentication Demo App' });
+  res.render('index');
 });
 
 //Register Routes
@@ -25,7 +25,7 @@ router.post('/register',function(req, res, next) {
             return res.render('register');
         }
         passport.authenticate('local')(req, res, function(){
-            res.redirect('secret');
+            res.redirect('/secret');
         });
     });
 });
@@ -44,6 +44,14 @@ router.post('/login', passport.authenticate('local', {
   successRedirect: '/secret',
   failureRedirect: '/login'
 }), function(req,res){
+  console.log(req.user.username);
 });
+
+//Logout logic
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+
 
 module.exports = router;

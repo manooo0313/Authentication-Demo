@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<% include ./partials/header %>
+
     <h1>This is the HOME page</h1>
-    <p>Welcome to my <%= title %></p>
+    <p>Welcome to my Authentication Demo App</p>
     <li><a href="/register">Sign Up!</a></li>
-  </body>
-</html>
+    <li><a href="/login">Login!</a></li>
+    <li><a href="/logout">Logout!</a></li>
+
+
+<% include ./partials/footer %>
